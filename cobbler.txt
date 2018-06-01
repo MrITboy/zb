@@ -1,74 +1,76 @@
-Ò»¡¢´î½¨CentOSĞéÄâ»ú
-  ĞÂ½¨Ò»Ì¨ĞéÄâ»ú£¬·ÅÈëCentOS7µÄ¹âÅÌ
-  ÄÚ´æÎª2G£¬Ó²ÅÌ50G
-  ÍøÂçÀàĞÍÎª private1
-  ·ÖÇø×Ô¶¯Ñ¡Ôñ£¬ÉèÖÃrootÃÜÂë£¬½¨Á¢ÆÕÍ¨ÓÃ»§
+hahahahahhaha
 
-¶ş¡¢ĞéÄâ»úÉèÖÃ  
-   1.ÉèÖÃ·À»ğÇ½Îªtrusted
-   2.µ±Ç°¼°ÓÀ¾ÃÉèÖÃSELinux×´Ì¬Îªpermissive
-   3.ÅäÖÃIPµØÖ·£º192.168.4.180/24
-   4.ÀûÓÃ±¾µØ/dev/cdrom¹ÒÔØ,´î½¨±¾µØYum²Ö¿â   
-   5.Ö÷»úÃû£ºcobbler.tedu.cn
+ä¸€ã€æ­å»ºCentOSè™šæ‹Ÿæœº
+  æ–°å»ºä¸€å°è™šæ‹Ÿæœºï¼Œæ”¾å…¥CentOS7çš„å…‰ç›˜
+  å†…å­˜ä¸º2Gï¼Œç¡¬ç›˜50G
+  ç½‘ç»œç±»å‹ä¸º private1
+  åˆ†åŒºè‡ªåŠ¨é€‰æ‹©ï¼Œè®¾ç½®rootå¯†ç ï¼Œå»ºç«‹æ™®é€šç”¨æˆ·
 
-Èı¡¢ÀûÓÃscpÕæ»ú´«µİCobbler.zip°üµ½ĞéÄâ»ú192.168.4.180ÖĞ
- # scp /root/×ÀÃæ/Cobbler.zip   root@192.168.4.180:/root/
+äºŒã€è™šæ‹Ÿæœºè®¾ç½®  
+   1.è®¾ç½®é˜²ç«å¢™ä¸ºtrusted
+   2.å½“å‰åŠæ°¸ä¹…è®¾ç½®SELinuxçŠ¶æ€ä¸ºpermissive
+   3.é…ç½®IPåœ°å€ï¼š192.168.4.180/24
+   4.åˆ©ç”¨æœ¬åœ°/dev/cdromæŒ‚è½½,æ­å»ºæœ¬åœ°Yumä»“åº“   
+   5.ä¸»æœºåï¼šcobbler.tedu.cn
+
+ä¸‰ã€åˆ©ç”¨scpçœŸæœºä¼ é€’Cobbler.zipåŒ…åˆ°è™šæ‹Ÿæœº192.168.4.180ä¸­
+ # scp /root/æ¡Œé¢/Cobbler.zip   root@192.168.4.180:/root/
 
 
-ËÄ¡¢´î½¨Cobbler×°»úÆ½Ì¨
+å››ã€æ­å»ºCobblerè£…æœºå¹³å°
 
-  Cobbler¸ÅÊöÈí¼ş£¬¹ÜÀídhcp¡¢tftp¡¢Web·şÎñ
-    ×ÔÓÉµÄµ¼Èë¾µÏñÓëksÓ¦´ğÎÄ¼ş
+  Cobbleræ¦‚è¿°è½¯ä»¶ï¼Œç®¡ç†dhcpã€tftpã€WebæœåŠ¡
+    è‡ªç”±çš„å¯¼å…¥é•œåƒä¸ksåº”ç­”æ–‡ä»¶
 
-1.½âÑ¹Cobbler.zip°ü
+1.è§£å‹Cobbler.zipåŒ…
 [root@cobbler /]# unzip /root/Cobbler.zip -d /
 [root@cobbler /]# cd /Cobbler/
-[root@cobbler Cobbler]# unzip cobbler.zip    #½âÑ¹µ½µ±Ç°Ä¿Â¼
+[root@cobbler Cobbler]# unzip cobbler.zip    #è§£å‹åˆ°å½“å‰ç›®å½•
 [root@cobbler Cobbler]# ls
 [root@cobbler Cobbler]# cd cobbler
 [root@cobbler cobbler]# ls
 
 #####################################################
-Îå¡¢°²×°cobblerÖ÷³ÌĞò¡¢¹¤¾ß°üµÈ
+äº”ã€å®‰è£…cobblerä¸»ç¨‹åºã€å·¥å…·åŒ…ç­‰
 [root@cobbler /]# yum -y install /Cobbler/cobbler/*.rpm
 
 #################################################################
-cobblerÍøÂç×°»ú²¿Êğ
+cobblerç½‘ç»œè£…æœºéƒ¨ç½²
 
-1.°²×°Èí¼ş cobbler cobbler-web dhcp tftp-server pykickstart httpd  tftp-server 
+1.å®‰è£…è½¯ä»¶ cobbler cobbler-web dhcp tftp-server pykickstart httpd  tftp-server 
 
- cobbler         #cobbler³ÌĞò°ü
- cobbler-web     #cobblerµÄweb·şÎñ°ü
- pykickstart     #cobbler¼ì²ékickstartÓï·¨´íÎó
- httpd           #Apache web·şÎñ
- dhcp            #Dhcp·şÎñ
- tftp-server     #tftp·şÎñ
+ cobbler         #cobblerç¨‹åºåŒ…
+ cobbler-web     #cobblerçš„webæœåŠ¡åŒ…
+ pykickstart     #cobbleræ£€æŸ¥kickstartè¯­æ³•é”™è¯¯
+ httpd           #Apache webæœåŠ¡
+ dhcp            #DhcpæœåŠ¡
+ tftp-server     #tftpæœåŠ¡
 
-2.ÅäÖÃcobbler
+2.é…ç½®cobbler
 [root@svr7 /]# vim /etc/cobbler/settings
 
- next_server:  192.168.4.180   #ÉèÖÃÏÂÒ»¸ö·şÎñÆ÷»¹Îª±¾»ú
- server: 192.168.4.180         #ÉèÖÃ±¾»úÎªcobbler·şÎñÆ÷
- manage_dhcp: 1                #ÉèÖÃcobbler¹ÜÀídhcp·şÎñ
- pxe_just_once: 1              #·ÀÖ¹¿Í»§¶ËÖØ¸´°²×°²Ù×÷ÏµÍ³
+ next_server:  192.168.4.180   #è®¾ç½®ä¸‹ä¸€ä¸ªæœåŠ¡å™¨è¿˜ä¸ºæœ¬æœº
+ server: 192.168.4.180         #è®¾ç½®æœ¬æœºä¸ºcobbleræœåŠ¡å™¨
+ manage_dhcp: 1                #è®¾ç½®cobblerç®¡ç†dhcpæœåŠ¡
+ pxe_just_once: 1              #é˜²æ­¢å®¢æˆ·ç«¯é‡å¤å®‰è£…æ“ä½œç³»ç»Ÿ
 
- ¿ª»úÆô¶¯£º Æ¥Åä¼°Í£Ö¹  
-     1.Ó²ÅÌÆô¶¯   2.¹âÇıÉè±¸  3.UÅÌ  4.ÍøÂçÒıµ¼   
+ å¼€æœºå¯åŠ¨ï¼š åŒ¹é…åŠåœæ­¢  
+     1.ç¡¬ç›˜å¯åŠ¨   2.å…‰é©±è®¾å¤‡  3.Uç›˜  4.ç½‘ç»œå¼•å¯¼   
  
 
-3.ÅäÖÃcobblerµÄdhcp
+3.é…ç½®cobblerçš„dhcp
 [root@svr7 /]# vim /etc/cobbler/dhcp.template 
 
   :%s  /192.168.1/192.168.4/g
 
-4.¾ø¶ÔÂ·¾¶½âÑ¹cobbler_boot.tar.gz    #ÖÚ¶àµÄÒıµ¼ÎÄ¼ş
+4.ç»å¯¹è·¯å¾„è§£å‹cobbler_boot.tar.gz    #ä¼—å¤šçš„å¼•å¯¼æ–‡ä»¶
 
 # tar -tf  /Cobbler/cobbler_boot.tar.gz
-# tar -xPf  /Cobbler/cobbler_boot.tar.gz  #¾ø¶ÔÂ·¾¶ÊÍ·Å
+# tar -xPf  /Cobbler/cobbler_boot.tar.gz  #ç»å¯¹è·¯å¾„é‡Šæ”¾
 
 # ls  /var/lib/cobbler/loaders/
 
-5.Æô¶¯Ïà¹Ø·şÎñ
+5.å¯åŠ¨ç›¸å…³æœåŠ¡
 
 [root@svr7 /]# systemctl restart cobblerd
 [root@svr7 /]# systemctl enable cobblerd
@@ -83,12 +85,12 @@ cobblerÍøÂç×°»ú²¿Êğ
 [root@svr7 /]# systemctl enable rsyncd
 
 
-6.Í¬²½Ë¢ĞÂcobblerÅäÖÃ
+6.åŒæ­¥åˆ·æ–°cobbleré…ç½®
 [root@svr7 /]# cobbler sync
 [root@svr7 /]# firefox https://192.168.4.180/cobbler_web
 
-   ÓÃ»§Ãû£ºcobbler
-   ÃÜÂë£ºcobbler
+   ç”¨æˆ·åï¼šcobbler
+   å¯†ç ï¼šcobbler
 
 
 
@@ -98,13 +100,13 @@ cobblerÍøÂç×°»ú²¿Êğ
 
 
 ##########################################################################################################
-  cobbler import  --path=¹ÒÔØµã   --name=µ¼ÈëÏµÍ³ÃüÃû£¨ËæÒâÆğ£©
-µ¼Èë°²×°¾µÏñÊı¾İ
+  cobbler import  --path=æŒ‚è½½ç‚¹   --name=å¯¼å…¥ç³»ç»Ÿå‘½åï¼ˆéšæ„èµ·ï¼‰
+å¯¼å…¥å®‰è£…é•œåƒæ•°æ®
 
 [root@Cobbler ~]# mount /dev/cdrom  /dvd
 mount: /dev/sr0 is write-protected, mounting read-only
 
-[root@room9pc01 /]# cobbler list   #²é¿´ÓĞÄÄĞ©ÏµÍ³
+[root@room9pc01 /]# cobbler list   #æŸ¥çœ‹æœ‰å“ªäº›ç³»ç»Ÿ
 
 [root@room9pc01 /]# cobbler import --path=/dvd  --name=CentOS7
 
@@ -115,19 +117,19 @@ mount: /dev/sr0 is write-protected, mounting read-only
 [root@room9pc01 /]# cobbler import --path=/rhel7  --name=RedHat7
 
 
-cobblerµ¼ÈëµÄ¾µÏñ·ÅÔÚ£º/var/www/cobbler/ks_mirror
+cobblerå¯¼å…¥çš„é•œåƒæ”¾åœ¨ï¼š/var/www/cobbler/ks_mirror
 
-[root@room9pc01 /]# cobbler profile report   #²é¿´cobblerµ¼ÈëĞÅÏ¢
+[root@room9pc01 /]# cobbler profile report   #æŸ¥çœ‹cobblerå¯¼å…¥ä¿¡æ¯
 
-[root@room9pc01 /]# killall  -9 dnsmasq  #ĞéÄâ»¯·şÎñ»á¸ÉÈÅDHCP·şÎñ
+[root@room9pc01 /]# killall  -9 dnsmasq  #è™šæ‹ŸåŒ–æœåŠ¡ä¼šå¹²æ‰°DHCPæœåŠ¡
 
 ############################################################################################################
 
-Ä¬ÈÏkickstartÎÄ¼ş´æ·ÅÎ»ÖÃ£º/var/lib/cobbler/kickstarts/
+é»˜è®¤kickstartæ–‡ä»¶å­˜æ”¾ä½ç½®ï¼š/var/lib/cobbler/kickstarts/
 
 [root@cobbler ~]# cobbler list
 
-ĞŞ¸ÄkickstartÎÄ¼ş£º
+ä¿®æ”¹kickstartæ–‡ä»¶ï¼š
 [root@cobbler ~]# cobbler profile edit --name=CentOS7.4-A --kickstart=/var/lib/cobbler/kickstarts/CentOS-7.3-x86_64.cfg
 [root@cobbler ~]# cobbler profile report
 [root@cobbler ~]# cobbler sync
